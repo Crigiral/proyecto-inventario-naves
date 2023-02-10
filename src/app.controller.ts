@@ -1,12 +1,21 @@
 import { Controller, Get } from '@nestjs/common';
+import { ComandoRegistrarLanzadera } from './aplicacion/lanzadera/ComandoRegistrarLanzadera';
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly appService: AppService,
+    private readonly serviceNaveLanzadera: ServiceNaveLanzadera,
+  ) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getNaves(): string {
+    return this.appService.getNaves();
   }
+
+  @Post()
+  async crearNaveEspacial(
+    @Body() comandoRegistrarLanzadera: ComandoRegistrarLanzadera,
+  ) {}
 }
