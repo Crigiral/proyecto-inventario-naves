@@ -7,8 +7,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mongodb',
-      url: process.env.MONGODB_CONNECTION_STRING,
-      database: process.env.MONGODB_DATABASE,
+      url: 'mongodb://localhost:27017',
+      database: 'nave-espacial',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       ssl: true,
       useUnifiedTopology: true,
