@@ -22,6 +22,5 @@ export class RepositorioLanzaderaMongodb {
     entidad.sistema_de_propulsion = lanzadera.sistema_de_propulsion;
 
     await this.repositorio.save(entidad);
-    return lanzadera;
   }
 }
