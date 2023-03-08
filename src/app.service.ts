@@ -9,6 +9,12 @@ export class AppService {
   }
 
   getNewNave(comandoRegistrarLanzadera: ComandoRegistrarLanzadera): string {
-    return `nombre de la nave: ${(comandoRegistrarLanzadera.velocidad).toString()}`;
+    return `nombre de la nave: ${(comandoRegistrarLanzadera.nombre).toString()}
+    velocidad: ${(comandoRegistrarLanzadera.velocidad).toString()}
+    peso: ${(comandoRegistrarLanzadera.peso).toString()}
+    capacidad de carga: ${(comandoRegistrarLanzadera.capacidad_de_carga).toString()}
+    sistema de propulsión: ${(comandoRegistrarLanzadera.sistema_de_propulsion).toString()}
+    tipo de lanzadera: ${(comandoRegistrarLanzadera.tipo_lanzadera).toString()}`;
+  
   }
 }

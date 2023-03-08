@@ -15,8 +15,6 @@ import { ComandoRegistrarLanzadera } from './aplicacion/lanzadera/ComandoRegistr
     //   useUnifiedTopology: true,
     //   useNewUrlParser: true,
     // }),
-
-    ComandoRegistrarLanzadera,
   ],
   controllers: [AppController],
   providers: [AppService],
