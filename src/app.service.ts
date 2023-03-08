@@ -8,7 +8,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  getNewNave(objeto: string): string {
-    return `nombre de la nave: ${(objeto).toString()}`;
+  getNewNave(comandoRegistrarLanzadera: ComandoRegistrarLanzadera): string {
+    return `nombre de la nave: ${(comandoRegistrarLanzadera.velocidad).toString()}`;
   }
 }

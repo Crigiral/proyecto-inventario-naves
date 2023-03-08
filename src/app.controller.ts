@@ -18,9 +18,9 @@ export class AppController {
 
   @Post()
   async crearNaveEspacial(
-    @Body() objeto: string
+    @Body() comandoRegistrarLanzadera: ComandoRegistrarLanzadera
   ) {
-    console.log(objeto)
-    return this.appService.getNewNave(objeto);
+    console.log(comandoRegistrarLanzadera);
+    return this.appService.getNewNave(comandoRegistrarLanzadera);
   }
 }
