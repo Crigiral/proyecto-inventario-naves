@@ -27,5 +27,4 @@ export class  ComandoRegistrarLanzadera {
   @ApiProperty()
   public tipo_lanzadera: string;
 
-  
 }

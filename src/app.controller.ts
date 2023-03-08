@@ -9,7 +9,6 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(
     private readonly appService: AppService,
-    private readonly serviceNaveLanzadera: ServiceNaveLanzadera,
   ) {}
 
   @Get()
@@ -21,6 +20,7 @@ export class AppController {
   async crearNaveEspacial(
     @Body() comandoRegistrarLanzadera: ComandoRegistrarLanzadera,
   ) {
-    return this.serviceNaveLanzadera.ejecutar(comandoRegistrarLanzadera);
+    console.log(comandoRegistrarLanzadera)
+    return this.appService.getNewNave(comandoRegistrarLanzadera);
   }
 }
