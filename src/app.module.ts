@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ComandoRegistrarLanzadera } from './aplicacion/lanzadera/ComandoRegistrarLanzadera';
 
 @Module({
   imports: [
@@ -14,6 +15,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     //   useUnifiedTopology: true,
     //   useNewUrlParser: true,
     // }),
+
+    ComandoRegistrarLanzadera,
   ],
   controllers: [AppController],
   providers: [AppService],
